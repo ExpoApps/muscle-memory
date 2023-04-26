@@ -1,9 +1,12 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
-import SafeScreen from "components/SafeScreen";
 
 const Modal = () => {
-  return <Text>modal</Text>;
+  return (
+    <View style={{ height: "50%" }}>
+      <Text>modal</Text>
+    </View>
+  );
 };
 
 export default Modal;

@@ -1,13 +1,23 @@
 import React from "react";
-import { Link } from "expo-router";
-import { View } from "react-native";
+import { View, FlatList } from "react-native";
+import ExerciseCard from "components/ExerciseCard";
 
 const ExercisePage = () => {
+  const exerciseList = [
+    { id: "squat", title: "squat" },
+    { id: "benchpress", title: "benchpress" },
+    { id: "pullup", title: "pullup" },
+    { id: "row", title: "row" },
+    { id: "deadlift", title: "deadlift" },
+  ];
+
   return (
     <View style={{ flex: 1, margin: 8 }}>
-      <Link href="/exercises/1">Exercise One</Link>
-      <Link href="/exercises/2">Exercise Two</Link>
-      <Link href="/exercises/3">Exercise Three</Link>
+      <FlatList
+        data={exerciseList}
+        renderItem={({ item }) => <ExerciseCard title={item.title} />}
+        keyExtractor={(item) => item.id}
+      />
     </View>
   );
 };

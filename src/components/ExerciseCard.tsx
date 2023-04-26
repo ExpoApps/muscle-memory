@@ -2,10 +2,10 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { useRouter } from "expo-router";
 
-const RoutineCard = ({ title }) => {
+const ExerciseCard = ({ title }) => {
   const router = useRouter();
   const handlePress = () => {
-    router.push("routines/" + title);
+    router.push("exercises/" + title);
   };
   return (
     <TouchableOpacity onPress={handlePress}>
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RoutineCard;
+export default ExerciseCard;
