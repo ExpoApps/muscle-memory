@@ -1,6 +1,7 @@
 import React from "react";
 import { Stack, useRouter } from "expo-router";
-import { Button } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { Feather } from "@expo/vector-icons";
 
 const StackLayout = () => {
   const router = useRouter();
@@ -27,7 +28,15 @@ const StackLayout = () => {
         name="modal"
         options={{
           presentation: "modal",
-          headerShown: false,
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => {
+                router.back();
+              }}
+            >
+              <Feather name="info" size={24} color="black"></Feather>
+            </TouchableOpacity>
+          ),
         }}
       />
       <Stack.Screen

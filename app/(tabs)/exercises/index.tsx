@@ -1,16 +1,14 @@
-import SafeScreen from "components/SafeScreen";
 import React from "react";
-import { Link, useRouter } from "expo-router";
-import FlexIcon from "components/FlexIcon";
+import { Link } from "expo-router";
+import { View } from "react-native";
 
 const ExercisePage = () => {
   return (
-    <SafeScreen>
-      <FlexIcon />
+    <View style={{ flex: 1, margin: 8 }}>
       <Link href="/list/1">Exercise One</Link>
       <Link href="/list/2">Exercise Two</Link>
       <Link href="/list/3">Exercise Three</Link>
-    </SafeScreen>
+    </View>
   );
 };
 
