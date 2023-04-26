@@ -1,6 +1,7 @@
-import { View, Text, Pressable } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -9,11 +10,9 @@ const LoginPage = () => {
   };
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Link href={"/(tabs)/exercises"} asChild>
-        <Pressable onPress={handlePress}>
-          <Text>Start</Text>
-        </Pressable>
-      </Link>
+      <TouchableOpacity onPress={handlePress}>
+        <Text>Start</Text>
+      </TouchableOpacity>
     </View>
   );
 };

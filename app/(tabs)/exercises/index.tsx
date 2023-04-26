@@ -1,15 +1,17 @@
-import { View } from "react-native";
+import SafeScreen from "components/SafeScreen";
 import React from "react";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
+import FlexIcon from "components/FlexIcon";
 
-const ListPage = () => {
+const ExercisePage = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Link href="/list/1">News One</Link>
-      <Link href="/list/2">News Two</Link>
-      <Link href="/list/3">News Three</Link>
-    </View>
+    <SafeScreen>
+      <FlexIcon />
+      <Link href="/list/1">Exercise One</Link>
+      <Link href="/list/2">Exercise Two</Link>
+      <Link href="/list/3">Exercise Three</Link>
+    </SafeScreen>
   );
 };
 
-export default ListPage;
+export default ExercisePage;

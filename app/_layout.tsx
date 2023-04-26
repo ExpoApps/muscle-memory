@@ -27,14 +27,7 @@ const StackLayout = () => {
         name="modal"
         options={{
           presentation: "modal",
-          headerLeft: () => (
-            <Button
-              title="Close"
-              onPress={() => {
-                router.back();
-              }}
-            />
-          ),
+          headerShown: false,
         }}
       />
       <Stack.Screen

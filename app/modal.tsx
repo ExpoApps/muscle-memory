@@ -1,11 +1,14 @@
-import { View, Text } from "react-native";
+import { Text } from "react-native";
 import React from "react";
+import SafeScreen from "components/SafeScreen";
+import FlexIcon from "components/FlexIcon";
 
 const Modal = () => {
   return (
-    <View>
+    <SafeScreen>
+      <FlexIcon />
       <Text>modal</Text>
-    </View>
+    </SafeScreen>
   );
 };
 
