@@ -4,6 +4,7 @@ import { Button } from "react-native";
 
 const StackLayout = () => {
   const router = useRouter();
+
   return (
     <Stack
       screenOptions={{
@@ -38,17 +39,7 @@ const StackLayout = () => {
       />
       <Stack.Screen
         name="(tabs)"
-        options={{
-          headerTitle: "Tabs",
-          headerRight: () => (
-            <Button
-              title="Open"
-              onPress={() => {
-                router.push("modal");
-              }}
-            />
-          ),
-        }}
+        options={{ headerShown: false }}
       ></Stack.Screen>
     </Stack>
   );
