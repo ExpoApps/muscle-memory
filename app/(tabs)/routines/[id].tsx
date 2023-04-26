@@ -6,8 +6,8 @@ const NewsDetailsPage = () => {
   const { id } = useSearchParams();
   return (
     <View>
-      <Stack.Screen options={{ headerTitle: `News #${id}` }} />
-      <Text>My News: {id}</Text>
+      <Stack.Screen options={{ headerTitle: `Routine - ${id}` }} />
+      <Text>My Routine: {id}</Text>
     </View>
   );
 };

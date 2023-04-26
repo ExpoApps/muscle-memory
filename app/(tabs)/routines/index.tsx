@@ -1,22 +1,17 @@
-import { View } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
+import { View } from "react-native";
+import RoutineCard from "components/RoutineCard";
 
-const ListPage = () => {
+const RoutinePage = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "red",
-      }}
-    >
-      <Link href="/list/1">News 1</Link>
-      <Link href="/list/2">News Two</Link>
-      <Link href="/list/3">News Three</Link>
+    <View style={{ flex: 1, margin: 8 }}>
+      <RoutineCard title="Core" />
+      <Link href="/routines/1">Routine One</Link>
+      <Link href="/routines/2">Routine Two</Link>
+      <Link href="/routines/3">Routine Three</Link>
     </View>
   );
 };
 
-export default ListPage;
+export default RoutinePage;

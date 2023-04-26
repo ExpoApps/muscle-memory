@@ -26,6 +26,9 @@ export default () => {
             <FontAwesome5 name="user" size={size} color={color} />
           ),
           ...modalOptions,
+          headerTitleStyle: {
+            textTransform: "uppercase",
+          },
         }}
       />
       <Tabs.Screen
@@ -36,6 +39,9 @@ export default () => {
             <FontAwesome5 name="newspaper" size={size} color={color} />
           ),
           ...modalOptions,
+          headerTitleStyle: {
+            textTransform: "uppercase",
+          },
         }}
       />
     </Tabs>
