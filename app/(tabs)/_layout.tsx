@@ -5,30 +5,20 @@ export default () => {
   return (
     <Tabs>
       <Tabs.Screen
-        name="home"
+        name="routines"
         options={{
-          tabBarLabel: "List",
-          headerTitle: "Home Screen",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="list" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          tabBarLabel: "Account",
-          headerTitle: "My Account",
+          tabBarLabel: "Routines",
+          headerTitle: "Routines",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5 name="user" size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="list"
+        name="exercises"
         options={{
-          tabBarLabel: "News",
-          headerShown: false,
+          tabBarLabel: "Exercises",
+          headerTitle: "Exercises",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5 name="newspaper" size={size} color={color} />
           ),

@@ -5,7 +5,7 @@ import { Link, useRouter } from "expo-router";
 const LoginPage = () => {
   const router = useRouter();
   const handlePress = () => {
-    router.replace("home");
+    router.replace("routines");
   };
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
