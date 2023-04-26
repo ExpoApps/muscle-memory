@@ -9,9 +9,9 @@ const LoginPage = () => {
   };
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Link href={"/register"} asChild>
+      <Link href={"/(tabs)/exercises"} asChild>
         <Pressable onPress={handlePress}>
-          <Text>Open register</Text>
+          <Text>Start</Text>
         </Pressable>
       </Link>
     </View>

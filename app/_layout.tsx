@@ -18,20 +18,8 @@ const StackLayout = () => {
     >
       <Stack.Screen
         name="index"
-        options={{ headerTitle: "Login", headerShown: false }}
-      ></Stack.Screen>
-      <Stack.Screen
-        name="register"
         options={{
-          headerTitle: "Create Account",
-          headerRight: () => (
-            <Button
-              title="Open"
-              onPress={() => {
-                router.push("modal");
-              }}
-            />
-          ),
+          headerShown: false,
         }}
       ></Stack.Screen>
       <Stack.Screen
@@ -50,7 +38,17 @@ const StackLayout = () => {
       />
       <Stack.Screen
         name="(tabs)"
-        options={{ headerShown: false }}
+        options={{
+          headerTitle: "Tabs",
+          headerRight: () => (
+            <Button
+              title="Open"
+              onPress={() => {
+                router.push("modal");
+              }}
+            />
+          ),
+        }}
       ></Stack.Screen>
     </Stack>
   );
