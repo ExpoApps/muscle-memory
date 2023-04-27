@@ -1,18 +1,11 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React from "react";
-import { useRouter } from "expo-router";
 
 const RoutineCard = ({ title }) => {
-  const router = useRouter();
-  const handlePress = () => {
-    router.push("routines/" + title);
-  };
   return (
-    <TouchableOpacity onPress={handlePress}>
-      <View style={styles.container}>
-        <Text>{title}</Text>
-      </View>
-    </TouchableOpacity>
+    <View style={styles.container}>
+      <Text>{title}</Text>
+    </View>
   );
 };
 

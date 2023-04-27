@@ -6,7 +6,7 @@ const NewsDetailsPage = () => {
   const { id } = useSearchParams();
   return (
     <View>
-      <Stack.Screen options={{ headerTitle: `Exercise #${id}` }} />
+      <Stack.Screen options={{ headerTitle: `Exercise ${id}` }} />
       <Text>My Exercise: {id}</Text>
     </View>
   );
