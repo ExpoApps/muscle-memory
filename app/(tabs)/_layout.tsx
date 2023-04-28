@@ -1,21 +1,7 @@
-import { Tabs, useRouter } from "expo-router";
+import { Tabs } from "expo-router";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { TouchableOpacity } from "react-native";
-import { Feather } from "@expo/vector-icons";
 
 export default () => {
-  const router = useRouter();
-  const modalOptions = {
-    headerRight: () => (
-      <TouchableOpacity
-        onPress={() => {
-          router.push("modal");
-        }}
-      >
-        <Feather name="info" size={24} color="black"></Feather>
-      </TouchableOpacity>
-    ),
-  };
   return (
     <Tabs>
       <Tabs.Screen
@@ -25,10 +11,7 @@ export default () => {
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5 name="user" size={size} color={color} />
           ),
-          ...modalOptions,
-          headerTitleStyle: {
-            textTransform: "uppercase",
-          },
+          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -38,10 +21,7 @@ export default () => {
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5 name="newspaper" size={size} color={color} />
           ),
-          ...modalOptions,
-          headerTitleStyle: {
-            textTransform: "uppercase",
-          },
+          headerShown: false,
         }}
       />
     </Tabs>
