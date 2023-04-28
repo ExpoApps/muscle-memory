@@ -12,7 +12,7 @@ const IconLink = ({ route, icon }) => {
         router.push(route);
       }}
     >
-      <Feather name={icon} size={24} color="black"></Feather>
+      <Feather name={icon} size={24} color="white"></Feather>
     </TouchableOpacity>
   );
 };

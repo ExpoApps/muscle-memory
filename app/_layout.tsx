@@ -1,50 +1,22 @@
-import React from "react";
-import { Stack, useRouter } from "expo-router";
-import { TouchableOpacity } from "react-native";
-import { Feather } from "@expo/vector-icons";
+import { ThemeProvider, DarkTheme } from "@react-navigation/native";
+import { Stack } from "expo-router";
 
-const StackLayout = () => {
-  const router = useRouter();
-
+export default function RootLayout() {
   return (
-    <Stack
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: "#10101E",
-        },
-        headerTintColor: "#fff",
-        headerTitleStyle: {
-          fontWeight: "bold",
-        },
-      }}
-    >
-      <Stack.Screen
-        name="index"
-        options={{
-          headerShown: false,
-        }}
-      ></Stack.Screen>
-      <Stack.Screen
-        name="modal"
-        options={{
-          presentation: "modal",
-          headerRight: () => (
-            <TouchableOpacity
-              onPress={() => {
-                router.back();
-              }}
-            >
-              <Feather name="info" size={24} color="black"></Feather>
-            </TouchableOpacity>
-          ),
-        }}
-      />
-      <Stack.Screen
-        name="(tabs)"
-        options={{ headerShown: false }}
-      ></Stack.Screen>
-    </Stack>
+    <ThemeProvider value={DarkTheme}>
+      <Stack>
+        <Stack.Screen
+          name="index"
+          options={{
+            headerShown: false,
+          }}
+        ></Stack.Screen>
+        <Stack.Screen name="modal" />
+        <Stack.Screen
+          name="(tabs)"
+          options={{ headerShown: false }}
+        ></Stack.Screen>
+      </Stack>
+    </ThemeProvider>
   );
-};
-
-export default StackLayout;
+}

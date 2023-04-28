@@ -4,7 +4,7 @@ import React from "react";
 const RoutineCard = ({ title }) => {
   return (
     <View style={styles.container}>
-      <Text>{title}</Text>
+      <Text style={{ color: "white" }}>{title}</Text>
     </View>
   );
 };
@@ -13,9 +13,7 @@ const styles = StyleSheet.create({
   container: {
     marginVertical: 4,
     padding: 24,
-    backgroundColor: "#FFE1A0",
-    borderWidth: 1,
-    borderColor: "#dadada",
+    backgroundColor: "#151718",
     borderRadius: 10,
   },
 });

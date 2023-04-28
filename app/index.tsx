@@ -11,7 +11,7 @@ const LoginPage = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <TouchableOpacity onPress={handlePress}>
-        <Text>Start</Text>
+        <Text style={{ color: "white" }}>Start</Text>
       </TouchableOpacity>
     </View>
   );

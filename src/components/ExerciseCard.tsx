@@ -10,7 +10,7 @@ const ExerciseCard = ({ title }) => {
   return (
     <TouchableOpacity onPress={handlePress}>
       <View style={styles.container}>
-        <Text>{title}</Text>
+        <Text style={{ color: "white" }}>{title}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -20,9 +20,7 @@ const styles = StyleSheet.create({
   container: {
     marginVertical: 4,
     padding: 24,
-    backgroundColor: "#eaeaea",
-    borderWidth: 1,
-    borderColor: "#dadada",
+    backgroundColor: "#151718",
     borderRadius: 10,
   },
 });
