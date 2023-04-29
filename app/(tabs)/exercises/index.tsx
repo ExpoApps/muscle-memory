@@ -22,7 +22,13 @@ const ExercisePage = () => {
     <View style={{ flex: 1, margin: 8 }}>
       <FlatList
         data={sortedArray}
-        renderItem={({ item }) => <ExerciseCard title={item.title} />}
+        renderItem={({ item, index }) => (
+          <ExerciseCard
+            title={item.title}
+            isFirst={index === 0}
+            isLast={index === sortedArray.length - 1}
+          />
+        )}
         keyExtractor={(item) => item.id}
       />
     </View>

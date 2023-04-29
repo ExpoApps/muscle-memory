@@ -5,9 +5,10 @@ const palette = {
   yellow: "#FFE1A0",
   gray: "#E6E1DD",*/
   dark: "#151718",
-  gray:"1a1c1e",
+  gray: "#1a1c1e",
   gray_highlight: "#252728",
   lime: "#bdf147",
+  dark_lime: "#2c3121",
 
   black: "#0B0B0B",
   white: "F0F2F3",
