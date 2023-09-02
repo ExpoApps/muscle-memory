@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { useRouter } from "expo-router";
-import { FontAwesome5 } from "@expo/vector-icons";
 
 const ExerciseCard = ({ title, isFirst, isLast }) => {
   const router = useRouter();
@@ -12,7 +11,6 @@ const ExerciseCard = ({ title, isFirst, isLast }) => {
   return (
     <TouchableOpacity onPress={handlePress}>
       <View style={[styles.container, ...itemStyle]}>
-        <FontAwesome5 name="dumbbell" size={24} color="#2c3121" />
         <View style={{ flexDirection: "column" }}>
           <View style={{ flexDirection: "row" }}>
             <Text style={{ color: "white", fontWeight: "700" }}>
